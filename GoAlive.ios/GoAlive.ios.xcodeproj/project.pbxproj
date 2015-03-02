@@ -40,6 +40,7 @@
 		ADED004E1AA3B9510030849F /* GoAlive.iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoAlive.iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADED00531AA3B9510030849F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADED00541AA3B9510030849F /* GoAlive_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoAlive_iosTests.m; sourceTree = "<group>"; };
+		ADF5BAB91AA408B4004866C7 /* snapshot.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = snapshot.js; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		ADED002C1AA3B9510030849F = {
 			isa = PBXGroup;
 			children = (
+				ADF5BABA1AA40983004866C7 /* Fastlane */,
 				ADED00371AA3B9510030849F /* GoAlive.ios */,
 				ADED00511AA3B9510030849F /* GoAlive.iosTests */,
 				ADED00361AA3B9510030849F /* Products */,
@@ -117,6 +119,14 @@
 				ADED00531AA3B9510030849F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADF5BABA1AA40983004866C7 /* Fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				ADF5BAB91AA408B4004866C7 /* snapshot.js */,
+			);
+			name = Fastlane;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,10 +356,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = GoAlive.ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d7bd56ea-e970-445c-bec1-cc2078d2aecf";
 			};
 			name = Debug;
 		};
@@ -357,10 +368,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = GoAlive.ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "564d3dd1-4418-4688-a4c1-9a0d348a3c51";
 			};
 			name = Release;
 		};
@@ -368,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -387,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
